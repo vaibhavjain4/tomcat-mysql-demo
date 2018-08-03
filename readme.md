@@ -14,7 +14,7 @@ $create table testdata (id int not null auto_increment primary key,foo varchar(2
 $insert into testdata values(null, 'hello', 12345);
 
 # Edit and change mysql connection ip to cluster service ip and ensure correct database connection values in dbtest/META-INF/context.xml file
-<Resource name="jdbc/TestDB" auth="Container" type="javax.sql.DataSource"
+ <Resource name="jdbc/TestDB" auth="Container" type="javax.sql.DataSource"
                maxActive="100" maxIdle="30" maxWait="10000"
                username="dbadmin" password="dbpassword" driverClassName="com.mysql.jdbc.Driver"
                url="jdbc:mysql://<internal_mysql_service_ip>:3306/testdb"/>
