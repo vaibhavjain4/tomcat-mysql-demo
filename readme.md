@@ -24,10 +24,10 @@ FROM registry.access.redhat.com/jboss-webserver-3/webserver31-tomcat8-openshift
 
 
 # Login through oc cli to openshift and change to project
-$oc login https://<master-api-server-ip>:<port(8443)>/ -u <user> -p <password> <br/>
-$oc project tomcat-mysql-demo <or project name where mysql pod was provisioned> <br/>
-$oc new-app http://<git_server_repo_url> --strategy=docker <br/>
-$oc expose service <service-name(tomcat-mysql)> <br/>
+$oc login https://< master-api-server-ip >:< port(8443) >/ -u < user > -p < password > <br/>
+$oc project tomcat-mysql-demo < or project name where mysql pod was provisioned > <br/>
+$oc new-app http://< git_server_repo_url > --strategy=docker <br/>
+$oc expose service < service-name(tomcat-mysql) > <br/>
   
 # Test application
 Access the application url via browser and it should list the values inserted into database. Add more values through mysql terminal and refresh browser page.
